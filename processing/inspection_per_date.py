@@ -61,6 +61,8 @@ def _inspection_dataset_from_chiba_pref():
             continue
         if not row[0]: # pass empty row
             continue
+        if row[5] != '松戸':
+            continue
         definite_date = row[8]
         target_date = definite_date.date()
         if not target_date in data.keys():
