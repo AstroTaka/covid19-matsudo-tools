@@ -44,6 +44,8 @@ def parse_chiba_patients_list():
         year = row[2] # 年代
         sex = row[3] # 性別
         where_lived = row[4] # 居住地
+        if where_lived != '松戸市':
+          continue;
         category = row[5] # 区分
         if isinstance(row[6], int):
             date_of_occurrence = excel_date(row[6]) # 発症日
