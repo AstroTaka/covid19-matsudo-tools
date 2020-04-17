@@ -1,4 +1,4 @@
-# covid19-chiba-tools
+# covid19-matsudo-tools
 
 松戸市版のツール
 
