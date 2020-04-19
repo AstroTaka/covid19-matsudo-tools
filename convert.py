@@ -109,7 +109,7 @@ data = {
         "data": inspections
     },
     "inspections_summary": {
-        "date": inspections_summary_date_str,
+        "date": inspections_date_str, # 検査実施数のデータから生成しているらしい
         "data": inspections_summary_data,
         "labels": inspections_summary_labels
     },
