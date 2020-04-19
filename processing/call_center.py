@@ -1,7 +1,6 @@
 """
 コールセンター相談件数-RAW.xlsx
 """
-
 from openpyxl import load_workbook
 import os
 import sys
@@ -10,6 +9,12 @@ sys.path.append(str(Path('__file__').resolve().parent))
 from common import excel_date
 
 FILENAME = "コールセンター相談件数-RAW.xlsx"
+
+def call_center_modified():
+    paths = [os.path.abspath(os.path.dirname(__file__)), '..', 'data', FILENAME]
+    f = os.path.join(*paths)
+    wb = load_workbook(f)
+    return wb.properties.modified
 
 def parse_call_center():
     paths = [os.path.abspath(os.path.dirname(__file__)), '..', 'data', FILENAME]
